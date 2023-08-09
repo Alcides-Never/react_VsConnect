@@ -1,4 +1,5 @@
 import "./style.css"
+import "../ListaServicos/index"
 
 import Logo from "../../assets/img/logo.svg"
 import Cliente from "../../assets/img/clientes.png"
@@ -15,7 +16,7 @@ function Home() {
     function mostrarMenu() {
         let menu = document.getElementById("menu_links") as HTMLCanvasElement; // Obtém o elemento do menu pelo ID
         let sombra: any = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
-        let menu_barras:any = document.getElementById("menu_barras"); // Obtém o elemento do botão do menu pelo ID
+        let menu_barras: any = document.getElementById("menu_barras"); // Obtém o elemento do botão do menu pelo ID
         let body: any = document.getElementsByTagName("body")[0]; // Obtém o elemento body (primeiro elemento)
 
         if (window.getComputedStyle(menu).left != "10px") { // Verifica se a propriedade 'left' do estilo computado do elemento do menu é diferente de 10px
@@ -34,12 +35,10 @@ function Home() {
         menu_barras.classList.toggle("ativo"); // Alterna a classe 'ativo' no botão do menu
     }
 
-}
 
-
-return (
+return  (   
     <>
-        <div id="sombra"></div>
+        <div id= "sombra"></div>
         <header>
             <div className="container header_conteudo">
                 {/* <!-- <a className="menu_barras" href="#"><img onClick="mostrarMenu()" src="../Imagens/Menu de barras.svg" alt=""></a> -->
@@ -54,7 +53,7 @@ return (
                 <nav>
                     <div id="menu_links" className="menu_links">
                         <a href="../Home/index.html">home</a>
-                        <a href="#">serviços</a>
+                        <a  >serviços</a>
                         <a href="../CadastroDev/index.html">cadastro</a>
                     </div>
                     <a className="header_icone_login" href="../Login/index.html">
