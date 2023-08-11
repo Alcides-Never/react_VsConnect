@@ -1,16 +1,30 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Footer from './components/Footer'
-import Header from './components/Header'
+
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+
+
 // import App from './App'
 import './index.css'
 import Home from './pages/Home'
-// import Servicos from './pages/ListaServicos'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Servicos from './pages/ListaServicos'
+import Teste from './pages/Teste'
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header/>
-    <Home />
-    <Footer/>
+    {/* Router Global */}
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={ <Home /> }/>
+        <Route path='ListaServicos' element= { <Servicos /> } />
+        <Route path='Teste' element={ < Teste /> } />
+      </Routes>
+      <Footer />
+      
+    </BrowserRouter>
   </React.StrictMode>,
 )
