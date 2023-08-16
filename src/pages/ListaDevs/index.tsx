@@ -6,7 +6,33 @@ import "./style.css"
 export default function ListaDevs() {
 
     // const de armazanamento que armazenamento todos os devs disponiveis
-    const [devs, setDevs] = useState<>
+    const [devs, setDevs] = useState<any[]>([
+
+        {
+            img_perfil: "https://github.com/Thiago-Nascimento.png",
+            nome: "Thiago Nascimento",
+            email: "thiago@email.com",
+            skills: ["HTML", "CSS", "REACT"]
+        },
+        {
+            img_perfil: "https://github.com/JessicaSanto.png",
+            nome: "Jessica Franzon",
+            email: "jessica@email.com",
+            skills: ["HTML", "CSS", "REACT"]
+        },
+        {
+            img_perfil: "https://github.com/odirlei-assis.png",
+            nome: "Odirlei Sabella",
+            email: "odirlei@email.com",
+            skills: ["HTML", "CSS", "ANGULAR"]
+        },
+        {
+            img_perfil: "https://github.com/alexiamelhado18.png",
+            nome: "Aléxia Vitória",
+            email: "alexia@email.com",
+            skills: ["PYTHON", "VUE", "REACT"]
+        }
+    ]);
 
 
     // Fluxo, passe o nome da variavel e depois set+variavel declarada
@@ -34,9 +60,7 @@ export default function ListaDevs() {
     }
 
 
-    return (
-
-        <>
+    return (   
             <main>
                 <div className="container container_lista_devs">
                     <div className="lista_devs_conteudo">
@@ -64,13 +88,10 @@ export default function ListaDevs() {
                                     </li>
                                 }
                                 )}
-
                             </ul>
                         </div>
                     </div>
                 </div>
             </main>
-        </>
-
     )
 }

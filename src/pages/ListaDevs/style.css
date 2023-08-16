@@ -19,7 +19,7 @@ main {
 }
 
 .lista_devs_conteudo {
-    width: 100%;
+    width: 100%;    
     max-width: 900px;
     
     padding: 50px 0;
@@ -132,5 +132,6 @@ hr {
     padding-bottom: 20px;
     border-bottom: solid 1px #ffffff34;
 }
+
 
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 
@@ -22,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path='/' element={ <Home /> }/>
         <Route path='ListaServicos' element= { <Servicos /> } />
-        <Route path='listadevs' element={ <ListaDevs /> } />
+        <Route path='Listadevs' element={ <ListaDevs /> } />
         {/* <Route path='Teste' element={ < Teste /> } /> */}
       </Routes>
       <Footer />

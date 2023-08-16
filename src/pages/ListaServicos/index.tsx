@@ -4,7 +4,6 @@ import "../ListaServicos/style.css"
 
 function listaServicos() {
 
-
     // function mostrarMenu() {
     //     let menu = document.getElementById("menu_links") as HTMLCanvasElement; // Obtém o elemento do menu pelo ID
     //     let sombra: any = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
