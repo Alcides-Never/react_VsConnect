@@ -1,6 +1,8 @@
 
 import "../ListaServicos/style.css"
 
+import api from "../../utils/api"
+
 
 function listaServicos() {
 
@@ -25,6 +27,48 @@ function listaServicos() {
     //     }
     //     menu_barras.classList.toggle("ativo"); // Alterna a classe 'ativo' no botão do menu
     // }
+
+    const [servicos, setServicos] = useState<any[]>([]);
+
+    const [skillDigitada, setSkillDigitada] = useState<string>("");
+
+    const [listaServicosFiltrados, setListaServicosFiltrados] = useState<any[]>(servicos);
+
+    // useEffect( () => {
+    //     document.title = "Lista de Devs - VSConnect"
+
+    //     listarDesenvolvedores()
+    // }, [] )
+    
+    function buscarPorSkill(event: any){
+        event.preventDefault();
+
+        const servicosFiltrados = servicos.filter((servicos: any) => servicos.hardSkills.includes(skillDigitada.toLocaleUpperCase()));
+
+        if(servicosFiltrados.length === 0){
+            alert("Nenhum desenvolvedor(a) com essa skill")
+        }else{
+            setListaServicosFiltrados(servicosFiltrados)
+        }
+    }
+
+    function retornoServicosGeral(event: any){
+        if(event.target.value === ""){
+            listarDesenvolvedores()
+        }
+        setSkillDigitada(event.target.value)
+    }
+
+    function listarDesenvolvedores() {
+
+        api.get("users").then( (response: any) => {
+            console.log(response.data)
+            setServicos(response.data)
+        } )
+
+    }
+
+
 
     return (
         <>
