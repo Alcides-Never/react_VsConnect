@@ -11,6 +11,7 @@ import Header from './components/Header'
 import Servicos from './pages/ListaServicos'
 import Teste from './pages/Teste'
 import ListaDevs from './pages/ListaDevs'
+import PerfilUsuario from './pages/PerfilUsuario'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={ <Home /> }/>
         <Route path='ListaServicos' element= { <Servicos /> } />
         <Route path='Listadevs' element={ <ListaDevs /> } />
+        <Route path='perfil/:idUsuario' element={ <PerfilUsuario/> } />
         {/* <Route path='Teste' element={ < Teste /> } /> */}
       </Routes>
       <Footer />
