@@ -13,6 +13,7 @@ import Teste from './pages/Teste'
 import ListaDevs from './pages/ListaDevs'
 import PerfilUsuario from './pages/PerfilUsuario'
 import CadastroUsuario from './pages/CadastroUsuario'
+import CadastrarServico from './pages/CadastroServico'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='perfil/:idUsuario' element={ <PerfilUsuario/> } />
         <Route path='cadastroUsuario' element={ <CadastroUsuario/> } />
         {/* <Route path='Teste' element={ < Teste /> } /> */}
+        <Route path='cadastroServico' element={ <CadastrarServico/> }/>
       </Routes>
       <Footer />
       

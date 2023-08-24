@@ -2,6 +2,16 @@ import './style.css'
 
 export default function CardDev(props: any) {
 
+    // Função abaixo criada para corrigir a devolutiva que fica na base da da API que torna as skills em tipo string
+    // typeof prop.tech seja igual(===) string fará o comando a seguir
+    function parseListaTechs(){
+        if ( typeof props.techs === "string" ) {
+            return JSON.parse(props.techs)
+        } else {
+            return props.techs
+        }
+    }
+
     return (
 
         <div className="dev">
@@ -14,7 +24,7 @@ export default function CardDev(props: any) {
             </div>
                 <div className="techs">
                 {
-                    props.techs.map((tech: string, index: number) => {
+                    parseListaTechs().map((tech: string, index: number) => {
                         return <span key={index}>{tech}</span>
                     })
                 }
