@@ -28,7 +28,7 @@ function CadastrarServico() {
 
         formdata.append("titulo", titulo)
 
-        api.post("users", formdata).then( (response) => {
+        api.post("user", formdata).then( (response) => {
             console.log(response)
             alert("teste")
         }).catch( (error) => {
