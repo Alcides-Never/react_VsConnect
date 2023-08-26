@@ -22,6 +22,19 @@ function PerfilUsuario() {
     const [ cidade, setCidade ] = useState<string>("");
     const [ listaSkills, setListaSkills ] = useState<string>("");
 
+    // aqui abaixo está cadastrado uma função que ainda precisa ser editado
+
+
+    //Na condicional abaixo  ele o dado que vem no hardskills e compara se é do tipo string. Caso positivo ele pega a informação e converte para tipo json e guarda no response.data.hardskills senao mantêm a informação anterior.
+    
+    // if( typeof Response.data.hardskills === 'string') {
+    //     setListaSkills(JSON.parse(response.data.hardskills))
+    // } else {
+    //     setListaSkills(response.data.hardSkills)
+    // }
+
+
+
     return (
         <main id="main_perfilusuario">
             <div className="container container_perfil_dev">

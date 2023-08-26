@@ -35,6 +35,8 @@ function Login() {
 
             //A linha abaixo é voltado para navegar no perfil do usuario
             navigate("/perfil/" + response.data.user.id)
+            //Revarrega a página para resgatar do local storage o usuario cadastrado
+            navigate(0)
             
         } )
     }
